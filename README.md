@@ -41,3 +41,7 @@ You can create a executable (debug.out) for debugging a particular test with: <b
 `./debug_test.sh <CONTAINER> <TEST>`
 <br/>Example: <br/>
 `./debug_test.sh vector erase`
+
+# NB
+
+change the "CHECK_CAPACITY" function macro body to print the capacity directly instead of comparing the capacity with size for the tests to be more precise despite the iterator passed to the function (Biderictional iterator, input iterator, or random access iterator; each of these iterators differs in how the algorithm is implemented on the container) so the tests will be more generic.
